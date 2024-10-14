@@ -19,6 +19,11 @@ export default [
 		},
 	},
 	{
-		ignores: ["node_modules/", "jest.config.js"],
+		ignores: [
+			"node_modules/",
+			"jest.config.js",
+			"dist/",
+			"webpack.config.mjs",
+		],
 	}
 ];
