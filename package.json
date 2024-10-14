@@ -2,7 +2,7 @@
   "name": "worktools-for-ds",
   "version": "1.0.01",
   "main": "dist/work-tools-for-ds.umd.js",
-	"module": "dist/work-tools-for-ds.es.js",
+  "module": "dist/work-tools-for-ds.es.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "vite build",
@@ -15,6 +15,7 @@
   "description": "",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
+    "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.5",
     "@typescript-eslint/eslint-plugin": "^8.8.1",
