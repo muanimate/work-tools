@@ -31,4 +31,9 @@ describe('parseUrlParams', () => {
 		const result = parseUrlParams('https://example.com?name=John%20Doe&age=30');
 		expect(result).toEqual({ name: 'John Doe', age: '30' });
 	});
+
+	it('should handle query parameters with special characters', () => {
+		const result = parseUrlParams('https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx&redirect_uri=https%3A%2F%2Fbaidu.tieba.com%2fdswx%2f&response=code&scope=snsapi_userinfo&state=mine#wechat_redirect');
+		expect(result).toEqual({ appid: 'wx', redirect_uri: 'https://baidu.tieba.com/dswx/', response: 'code', scope: 'snsapi_userinfo', state: 'mine' });
+	});
 });
