@@ -1,5 +1,5 @@
 import { expect, describe, test } from '@jest/globals';
-import { thousandseparator, replaceParams } from '../../utils/string/string';
+import { thousandseparator, replaceParams, formatPhone } from '../../utils/string/string';
 
 describe('thousandseparator', () => {
 	test('should format number with thousand separators', () => {
@@ -65,5 +65,11 @@ describe('replaceParams', () => {
 		const str = 'Hello, {name}!';
 		const params = {};
 		expect(replaceParams(str, params)).toBe('Hello, {name}!');
+	});
+});
+
+describe('formatPhone', () => {
+	test('should handle phone number with more than 11 digits', () => {
+		expect(formatPhone('12345678901')).toBe('123 4567 8901');
 	});
 });
