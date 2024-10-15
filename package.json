@@ -1,6 +1,6 @@
 {
   "name": "worktools-for-ds",
-  "version": "1.0.03",
+  "version": "1.0.04",
   "main": "dist/work-tools-for-ds.umd.js",
   "module": "dist/work-tools-for-ds.es.js",
   "types": "dist/types/index.d.ts",
