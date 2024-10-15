@@ -1,5 +1,5 @@
 import { expect, describe, test } from '@jest/globals';
-import { thousandseparator, replaceParams, formatPhone } from '../../utils/string/string';
+import { thousandseparator, replaceParams, formatPhone } from '../../index';
 
 describe('thousandseparator', () => {
 	test('should format number with thousand separators', () => {
