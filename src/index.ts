@@ -1,33 +1,22 @@
-import { addKey } from "./utils/array/addkey";
-import { uniqueUsingSet, uniqueUsingMap } from "./utils/array/unique";
-import { parseUrlParams } from "./utils/parseQueryString/url";
-import { thousandseparator, formatPhone, replaceParams } from "./utils/string/string";
-import { isVaildIdCard } from "./utils/rules/idCard";
-import { debounce } from "./utils/others/debounce";
-import { throttle } from "./utils/others/throttle";
-
-export {
-  addKey,
-  uniqueUsingSet,
-  uniqueUsingMap,
-  parseUrlParams,
-  thousandseparator,
-	replaceParams,
-  isVaildIdCard,
-	debounce,
-	throttle,
-	formatPhone
-};
+import * as arrayUtils from "./utils/array";
+import * as stringUtils from "./utils/string";
+import * as dateUtils from "./utils/date";
+import * as rulesUtils from "./utils/rules";
+import * as othersUtils from "./utils/others";
+import * as parseQueryStringUtils from "./utils/parseQueryString";
 
 export default {
-  addKey,
-  uniqueUsingSet,
-  uniqueUsingMap,
-  parseUrlParams,
-  thousandseparator,
-	replaceParams,
-  isVaildIdCard,
-	debounce,
-	throttle,
-	formatPhone
+  ...arrayUtils,
+	...stringUtils,
+	...dateUtils,
+	...rulesUtils,
+	...othersUtils,
+	...parseQueryStringUtils
 };
+
+export * from "./utils/array";
+export * from "./utils/string";
+export * from "./utils/date";
+export * from "./utils/rules";
+export * from "./utils/others";
+export * from "./utils/parseQueryString";
