@@ -30,9 +30,11 @@ const formatDate = (date: Date, format: string): string => {
 
 	const replacements: { [key: string]: string } = {
 			"YYYY": year.toString(),
+			"yyyy": year.toString(),
 			"YY": yearShort,
 			"MM": month.toString().padStart(2, "0"),
 			"DD": day.toString().padStart(2, "0"),
+			"dd": day.toString().padStart(2, "0"),
 			"HH": hours24.toString().padStart(2, "0"),
 			"hh": hours12.toString().padStart(2, "0"),
 			"mm": minutes.toString().padStart(2, "0"),
@@ -41,7 +43,7 @@ const formatDate = (date: Date, format: string): string => {
 			"a": ampm.toLowerCase()
 	};
 
-	return format.replace(/YYYY|YY|MM|DD|HH|hh|mm|ss|A|a/g, match => replacements[match]);
+	return format.replace(/YYYY|yyyy|YY|MM|DD|dd|HH|hh|mm|ss|A|a/g, match => replacements[match]);
 };
 
 /**
