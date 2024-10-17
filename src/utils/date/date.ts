@@ -17,7 +17,7 @@
  * @param format - The format string.
  * @returns The formatted date string.
  */
-const formmatDate = (date: Date, format: string): string => {
+const formatDate = (date: Date, format: string): string => {
 	const year = date.getFullYear();
 	const yearShort = year.toString().slice(-2); // get last 2 digits
 	const month = date.getMonth() + 1;
@@ -63,10 +63,10 @@ const formmatTimeAgo = (date: Date): string => {
 	if (minutes < 60) return `${minutes}分钟前`;
 	if (hours < 24) return `${hours}小时前`;
 	if (days < 3) return `${days}天前`;
-	return formmatDate(date, 'YYYY-MM-DD');
+	return formatDate(date, 'YYYY-MM-DD');
 };
 
 export {
 	formmatTimeAgo,
-	formmatDate 
+	formatDate 
 };
