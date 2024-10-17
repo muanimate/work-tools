@@ -1,0 +1,1 @@
+export { isVaildIdCard } from "./idCard";
