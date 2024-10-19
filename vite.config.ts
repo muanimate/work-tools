@@ -12,7 +12,7 @@ export default defineConfig({
 			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'WorkToolsForDS',
 			formats: ['es', 'cjs', 'umd', 'iife'],
-			fileName: (format) => `Work-tools-for-ds.${format}.js`,
+			fileName: (format) => `Work-tools-for-ds.${format}.cjs`,
 		},
 		outDir: path.resolve(__dirname, 'dist'),
 	},
