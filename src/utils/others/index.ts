@@ -1,2 +1,12 @@
-export { debounce } from "./debounce";
-export { throttle } from "./throttle";
+import { debounce } from "./debounce";
+import { throttle } from "./throttle";
+
+export default {
+	debounce,
+	throttle
+}
+
+export {
+	debounce,
+	throttle
+}

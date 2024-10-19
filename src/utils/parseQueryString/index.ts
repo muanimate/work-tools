@@ -1,1 +1,5 @@
-export { parseUrlParams } from "./url";
+import { parseUrlParams } from "./url";
+
+export default {parseUrlParams};
+
+export { parseUrlParams };

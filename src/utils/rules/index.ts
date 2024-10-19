@@ -1,1 +1,5 @@
-export { isVaildIdCard } from "./idCard";
+import { isVaildIdCard } from "./idCard";
+
+export { isVaildIdCard };
+
+export default { isVaildIdCard };
