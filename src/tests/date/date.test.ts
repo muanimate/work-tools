@@ -1,46 +1,46 @@
-import { formmatDate, formmatTimeAgo } from '../../utils/date/date';
+import { formatDate, formmatTimeAgo } from '../../utils/date/date';
 import { expect, describe, it } from '@jest/globals';
 
-describe('formmatDate', () => {
+describe('formatDate', () => {
 	it('should format date as YYYY-MM-DD', () => {
 		const date = new Date(2023, 9, 5); // October 5, 2023
 		const format = 'YYYY-MM-DD';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('2023-10-05');
 	});
 
 	it('should format date as DD/MM/YYYY', () => {
 		const date = new Date(2023, 9, 5); // October 5, 2023
 		const format = 'DD/MM/YYYY';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('05/10/2023');
 	});
 
 	it('should format date and time as YYYY-MM-DD hh:mm:ss', () => {
 		const date = new Date(2023, 9, 5, 14, 30, 15); // October 5, 2023, 14:30:15
 		const format = 'YYYY-MM-DD hh:mm:ss';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('2023-10-05 02:30:15');
 	});
 
 	it('should format date and time as DD/MM/YYYY hh:mm', () => {
 		const date = new Date(2023, 9, 5, 9, 5); // October 5, 2023, 09:05
 		const format = 'DD/MM/YYYY hh:mm';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('05/10/2023 09:05');
 	});
 
 	it('should pad single digit month and day with zero', () => {
 		const date = new Date(2023, 0, 5); // January 5, 2023
 		const format = 'YYYY-MM-DD';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('2023-01-05');
 	});
 
 	it('should pad single digit hours, minutes, and seconds with zero', () => {
 		const date = new Date(2023, 9, 5, 4, 3, 2); // October 5, 2023, 04:03:02
 		const format = 'hh:mm:ss';
-		const result = formmatDate(date, format);
+		const result = formatDate(date, format);
 		expect(result).toBe('04:03:02');
 	});
 });
