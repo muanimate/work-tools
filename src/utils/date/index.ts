@@ -1,1 +1,1 @@
-export { formmatTimeAgo, formatDate } from "./date";
+export { formatTimeAgo, formatDate } from "./date";

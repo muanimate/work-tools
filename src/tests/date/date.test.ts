@@ -1,4 +1,4 @@
-import { formatDate, formmatTimeAgo } from '../../utils/date/date';
+import { formatDate, formatTimeAgo } from '../../utils/date/date';
 import { expect, describe, it } from '@jest/globals';
 
 describe('formatDate', () => {
@@ -45,41 +45,41 @@ describe('formatDate', () => {
 	});
 });
 
-describe('formmatTimeAgo', () => {
+describe('formatTimeAgo', () => {
 
 	it('should return "刚刚" for dates less than 5 seconds ago', () => {
 		const date = new Date(Date.now() - 3000); // 3 seconds ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('刚刚');
 	});
 
 	it('should return seconds ago for dates less than a minute ago', () => {
 		const date = new Date(Date.now() - 45000); // 45 seconds ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('45秒前');
 	});
 
 	it('should return minutes ago for dates less than an hour ago', () => {
 		const date = new Date(Date.now() - 1800000); // 30 minutes ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('30分钟前');
 	});
 
 	it('should return hours ago for dates less than a day ago', () => {
 		const date = new Date(Date.now() - 7200000); // 2 hours ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('2小时前');
 	});
 
 	it('should return days ago for dates less than 3 days ago', () => {
 		const date = new Date(Date.now() - 172800000); // 2 days ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('2天前');
 	});
 
 	it('should return formatted date for dates more than 3 days ago', () => {
 		const date = new Date('2023-10-01T14:30:00Z'); // 4 days ago
-		const result = formmatTimeAgo(date);
+		const result = formatTimeAgo(date);
 		expect(result).toBe('2023-10-01');
 	});
 });

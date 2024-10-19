@@ -53,7 +53,7 @@ const formatDate = (date: Date, format: string): string => {
  * @param date - The date to format.
  * @returns A string representing the relative time from the given date to now.
  */
-const formmatTimeAgo = (date: Date): string => {
+const formatTimeAgo = (date: Date): string => {
 	const now = new Date();
 	const diff = now.getTime() - date.getTime();
 	const seconds = Math.floor(diff / 1000);
@@ -69,6 +69,6 @@ const formmatTimeAgo = (date: Date): string => {
 };
 
 export {
-	formmatTimeAgo,
+	formatTimeAgo,
 	formatDate 
 };
