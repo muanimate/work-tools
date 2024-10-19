@@ -1,9 +1,9 @@
-import * as arrayUtils from "./utils/array";
-import * as stringUtils from "./utils/string";
-import * as dateUtils from "./utils/date";
-import * as rulesUtils from "./utils/rules";
-import * as othersUtils from "./utils/others";
-import * as parseQueryStringUtils from "./utils/parseQueryString";
+import * as arrayUtils from "./utils/array/index";
+import * as stringUtils from "./utils/string/index";
+import * as dateUtils from "./utils/date/index";
+import * as rulesUtils from "./utils/rules/index";
+import * as othersUtils from "./utils/others/index";
+import * as parseQueryStringUtils from "./utils/parseQueryString/index";
 
 export default {
   ...arrayUtils,
@@ -14,9 +14,9 @@ export default {
 	...parseQueryStringUtils
 };
 
-export * from "./utils/array";
-export * from "./utils/string";
-export * from "./utils/date";
-export * from "./utils/rules";
-export * from "./utils/others";
-export * from "./utils/parseQueryString";
+export * from "./utils/array/index";
+export * from "./utils/string/index";
+export * from "./utils/date/index";
+export * from "./utils/rules/index";
+export * from "./utils/others/index";
+export * from "./utils/parseQueryString/index";
