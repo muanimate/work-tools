@@ -1,12 +1,15 @@
 import { debounce } from "./debounce";
 import { throttle } from "./throttle";
+import { Interval } from "./timer";
 
 export default {
 	debounce,
-	throttle
+	throttle,
+	Interval
 }
 
 export {
 	debounce,
-	throttle
+	throttle,
+	Interval
 }
