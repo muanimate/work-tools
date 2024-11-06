@@ -14,8 +14,8 @@ export default {
 	...parseQueryStringUtils
 };
 
-export { addKey, uniqueUsingSet, uniqueUsingMap, groupBy} from "./utils/array/index";
-export { thousandseparator, replaceParams, formatPhone } from "./utils/string/index";
+export { addKey, uniqueUsingSet, uniqueUsingMap, groupBy, isEquals, findPath } from "./utils/array/index";
+export { thousandseparator, replaceParams, formatPhone, getStrLenWithChars } from "./utils/string/index";
 export { formatTimeAgo, formatDate } from "./utils/date/index";
 export { isVaildIdCard } from "./utils/rules/index";
 export {debounce, throttle} from "./utils/others/index";
