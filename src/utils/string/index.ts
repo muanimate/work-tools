@@ -1,9 +1,10 @@
-import { thousandseparator, replaceParams, formatPhone } from "./string";
+import { thousandseparator, replaceParams, formatPhone, getStrLenWithChars } from "./string";
 
 export default {
 	thousandseparator,
 	replaceParams,
-	formatPhone
+	formatPhone,
+	getStrLenWithChars
 }
 
-export { thousandseparator, replaceParams, formatPhone };
+export { thousandseparator, replaceParams, formatPhone, getStrLenWithChars };

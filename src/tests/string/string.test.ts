@@ -1,5 +1,5 @@
 import { expect, describe, test } from '@jest/globals';
-import { thousandseparator, replaceParams, formatPhone } from '../../index';
+import { thousandseparator, replaceParams, formatPhone, getStrLenWithChars } from '../../index';
 
 describe('thousandseparator', () => {
 	test('should format number with thousand separators', () => {
@@ -73,3 +73,29 @@ describe('formatPhone', () => {
 		expect(formatPhone('12345678901')).toBe('123 4567 8901');
 	});
 });
+
+describe('getStrLenWithChars', () => {
+		test('should return correct length for half-width characters', () => {
+			expect(getStrLenWithChars('abc')).toBe(3);
+		});
+
+		test('should return correct length for full-width characters', () => {
+			expect(getStrLenWithChars('ａｂｃ')).toBe(6);
+		});
+
+		test('should return correct length for mixed half-width and full-width characters', () => {
+			expect(getStrLenWithChars('aｂc')).toBe(4);
+		});
+
+		test('should return 0 for empty string', () => {
+			expect(getStrLenWithChars('')).toBe(0);
+		});
+
+		test('should return correct length for string with spaces', () => {
+			expect(getStrLenWithChars('a b c')).toBe(5);
+		});
+
+		test('should return correct length for string with 中文', () => {
+			expect(getStrLenWithChars('你好啊')).toBe(6);
+		});
+	});

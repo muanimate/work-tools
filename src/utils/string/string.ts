@@ -39,8 +39,29 @@ const formatPhone = (phone: string): string => {
 	return phone.replace(/(\d{3})(\d{4})(\d{4})/, '$1 $2 $3');
 }
 
+
+const isHalfWidth = (charCode: number): boolean => {
+	return (charCode >= 0x0001 && charCode <= 0x007e) || (charCode >= 0xff60 && charCode <= 0xff9f);
+};
+
+/**
+ * Calculates the length of a string, where half-width characters count as 1 and full-width characters count as 2.
+ *
+ * @param val - The input string to be measured.
+ * @returns The calculated length of the string.
+ */
+const getStrLenWithChars = (val: string): number => {
+  let count = 0;
+	for (const char of val) {
+		const c = char.charCodeAt(0);
+		count += isHalfWidth(c) ? 1 : 2;
+	}
+  return count;
+};
+
 export {
 	thousandseparator,
 	replaceParams,
-	formatPhone
+	formatPhone,
+	getStrLenWithChars
 }
