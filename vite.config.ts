@@ -16,6 +16,11 @@ export default defineConfig({
 		},
 		outDir: path.resolve(__dirname, 'dist'),
 	},
+	resolve: {
+		alias: {
+			'@': path.resolve(__dirname, 'src'),
+		}
+	},
 	plugins: [
 		dts({
 			outDir: 'dist/types',
