@@ -4,6 +4,7 @@ import dateUtils from "./utils/date/index";
 import rulesUtils from "./utils/rules/index";
 import othersUtils from "./utils/others/index";
 import parseQueryStringUtils from "./utils/parseQueryString/index";
+import objectUtils from "./utils/object";
 
 export default {
   ...arrayUtils,
@@ -11,7 +12,8 @@ export default {
 	...dateUtils,
 	...rulesUtils,
 	...othersUtils,
-	...parseQueryStringUtils
+	...parseQueryStringUtils,
+	...objectUtils
 };
 
 export { addKey, uniqueUsingSet, uniqueUsingMap, groupBy, isEquals, findPath } from "./utils/array/index";
@@ -20,3 +22,4 @@ export { formatTimeAgo, formatDate } from "./utils/date/index";
 export { isVaildIdCard } from "./utils/rules/index";
 export {debounce, throttle} from "./utils/others/index";
 export { parseUrlParams } from "./utils/parseQueryString/index";
+export { simpleFilterEmpty, isNotEmpty, deepFilterEmpty, filterEmpty } from "./utils/object/index";
